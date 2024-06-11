@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+h1{
+	font-size: 4rem;
+}
+a{
+    font-size: 1rem;
+	text-decoration: none;
+}
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.container{
+    min-height: 100vh;
+	width: 100%;
+	display: flex; 
+	align-items: center;
+	justify-content: center;
+}
+header{	
+    position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+.header{
+	min-height: 8vh;
+	background-color: white;
+}
+.navbar {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    font-family: Roboto, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.logo a{
+    display: flex;
+    float: left;
+	top: 0;
+	margin-left: 10%;
+	justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.logo a img{
+    width: 40px;
+    height: 48px;
+    padding-top: 5px;
+}
+.logo a h1{
+    color: black;
+    font-size: 1rem;
+}
+
+.navlist ul{
+	list-style: none;	
+	color: black;
+	width: 60vw;
+	top: 0;
+	display: flex;
+	/* margin-left:5%;
+    margin-right: 5%; */
+	align-items: center;
+	
+}
+.navlist ul li a{
+    font-size: 1rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	 padding: 5px; 
+	display: block;   
+}
+
+.buttons button{
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: white;
+
+}
+.buttons a{
+    font-weight: bold;
+    color: black;
+}
+
+#home{
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+    padding-top: 10px;    
+}
+#home .home{
+    display: flex;
+    flex-direction: column;
+    /* max-width: 1200px; */
+	margin: 0 auto;
+	padding: 0 50px 0 40px;
+	/* justify-content: flex-start; */
+    gap: 10px;
+}
+.home_txt{
+    float: left;
+    left: 10px;
+  
+    margin-top: 0;   
+}
+.home_txt h1{
+    font-size: 40px;
+}
+.home_txt p{
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.home_txt button{
+    background-color: #641EAF;
+    margin-top: 10px;
+    width: 140px;
+    height: 36px;
+    border-radius: 2rem;	
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 5rem;
+    cursor: pointer;
+}
+.home_txt button:hover{
+    color: #641EAF;
+    background-color: white;
+    border-radius: 2px solid #641EAF;
+}
+
+.about{       
+    width: 100%;
+	display: flex; 
+	 align-items: center; 
+	justify-content: center;
+    flex-direction: column-reverse;
+}
+.about .home_photo{
+    height: 300px;
+    margin: 2rem 5rem 2rem 5rem;
+}
+.about .about_txt{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 5rem 2rem 5rem;
+    font-size: 1.5rem;
+}
+
+.services{    
+    width: 100%;
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+    flex-direction: column;
+}
+.each_services {
+    display: none;
+   }
+.each_services img{
+    border-radius: 5%;
+    width: 100%;
+    height: 80%;
+}
+
+/* Slideshow container */
+.our_services {
+  position: relative;
+  margin: 5rem 1rem;
+  margin-top: 5rem;
+}
+.services p{
+    font-size: 1.5rem;
+    text-align: justify;
+  letter-spacing: 3px;
+    }
+
+/* Caption text */
+.photo{
+    display: flex;
+    flex-direction: row;  
+    /* justify-content: space-around;  */
+    gap: 15px;   
+    position: relative;
+}
+.photo h2{
+    font-size: 1.5rem;
+    margin-left: 5%;
+}
+.services_photo{
+    border-radius: 5%;    
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 10px;
+    /* width: 40%; */
+}
+.secvicetxt{
+    margin: 2%;
+}
+
+/* The steps/bullets/indicators */
+.step {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0 2px;
+    background-color:#641EAF ;
+    opacity: 0.8;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.3;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #641EAF;
+  opacity: 1;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15rem;
+       
+}
+input{    
+    width: 90%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid crimson;
+    border-radius: 10px;
+    gap: 5rem;
+    margin: auto 5%;
+    margin-top:1rem;
+}
+.textinput, .contactinfo{
+    justify-content: space-around;
+    display: inline;
+    font-size: 3rem;
+  
+}
+.contact textarea{
+    width: 90%;
+    height: 80px;
+    padding: 20px;
+    margin-top: 3rem;
+}
+input[type="Submit"]{
+    background-color: #641EAF;
+    margin-top: 10px;
+    width: 140px;
+    height: 40px;
+    border-radius: 2rem;	
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 5rem;
+    cursor: pointer;
+
+}
+
+ input[type="Submit"]:hover{
+    background-color: white;
+    color: #641EAF;
+    border: 1px solid #641EAF;
+    
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+    
+}
+
+.footer .navlist ul{
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+    width: 15rem;
+    align-items:flex-start;
+}
+.footer .navlist ul li a {
+    font-size: 1rem;    
+    padding: 4px;
+    text-transform: none;
+}
+.footer ul{
+    list-style-type: none;
+    font-size: 1rem;    
+    padding: 5px;
+    text-transform: none;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+}
+
+
+/* Sign Up */
+.signup{
+    display: flex;
+    flex-direction: column;
+}
+.signupform{
+    border: 2px dotted dodgerblue;
+    margin-top: 5rem;
+    padding: 10px;
+}
+.signupform h2{
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+/* .actor{
+    display: inline-block ;
+    width: 95%;
+   
+} */
+.tabs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    float: right;  
+    margin-bottom: 3rem;
+  }
+
+.tabs li{
+    /* background-color: #641EAF; */
+    width: 80px;
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 18px;
+    border-radius: 20px 0px 0px 0px;
+}
+.tabs li.active {
+    background-color: #641EAF;
+    color: white;
+  }
+.tabs #doctor-tab{
+    border-radius: 0px 20px 0px 0px;
+}
+.form-container {
+    padding: 20px;
+    margin-top: 4rem;
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+.signupform{
+    width: 90%;
+    margin: 5%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.gender_password{
+    display: flex;
+    /* justify-content: space-around; */
+    padding:1rem; 
+    
+}
+.gender_password input{
+    /* width: 25rem; */
+    height: 40px;
+    margin: 1rem 1rem;
+}
+.gender_password select{
+    /* width: 20rem; */
+    padding-left: 5%;
+    height: 40px;
+    margin: 1rem 1rem;
+    border-radius: 10px;
+
+}
+/* LOG IN */
+
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    /* margin-top: 10rem; */
+    gap: 5rem;
+    padding: 5%;
+    
+}
+.login p{
+    padding: 10px;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    padding-top: 20px;
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 10rem; */
+    padding: 10px;
+    width: 70%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    }
+.login form input[type='Password'], input[type='email']{
+    /* font-size: 2rem; */
+    display: inline-block;
+    /* width: 90%; */
+    height: 60px;
+    padding: 10px;
+    border: 1px solid crimson;
+    border-radius: 10px;
+    gap: 5rem;
+    /* margin: auto 5%; */
+    margin-top:1rem;
+
+}
+.login select{
+    font-size: 2rem;
+    padding-left: 5%;
+    height: 40px;
+    margin: 1rem 1rem;
+    border-radius: 10px;
+   }
+select option{
+     border-color: blue;
+}
+.login form img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: auto;
+    margin-left: 40%;
+}
+.loginput{
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    width: 90%;
+    
+    align-items: center;
+}
+.error-msg{
+    background-color: red;
+    color: white;
+    font-size: 2rem;
+    display: inline-block;
+    width: 90%;
+    height: 60px;
+    padding: 10px;
+    border: 1px solid crimson;
+    border-radius: 10px;
+    gap: 5rem;
+    margin: auto 5%;
+    margin-top:1rem;
+}
+  
+
+@media only screen and (min-width: 1200px) {
+    .logo a img{
+        width: 60px;
+        height: 66px;
+        padding-top: 5px;
+    }
+    .logo a h1{
+        font-size: 36px;
+    }
+    .navlist ul{
+        width: 78vw;
+        justify-content: center;
+    }
+    .navlist ul li a{
+        font-size: 2.5rem;
+        font-weight: 500;
+        padding: 20px;
+    }
+    .buttons button{
+        width: 128px;
+        height: 49px;
+        border-radius: 10px;
+    }
+    .buttons a{
+        font-size: 24px;
+    }
+    #home .home{
+        display: flex;
+        flex-direction: row;
+        margin-top: 0;
+        
+    }
+    #home .home img{
+        height: 450px;
+        width:auto;
+    }
+    .home_txt h1{
+        font-size: 60px;
+    }
+    .home_txt p{
+        margin-top: 20px;
+        font-size: 24px;
+    }
+    .home_txt button{
+        width: 247px;
+        height: 64px;
+        font-size: 2rem;
+    }
+    .about{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .about h1{
+        font-size: 60px;
+
+    }
+    .about .about_txt{
+        margin: 8rem 5rem auto 2rem;
+        font-size: 24px;
+        padding: 5rem;
+        width: 50%;
+       
+    }
+    .about .home_photo{
+        height: 400px;        
+        margin: 10rem 3rem auto 5rem;
+    }
+    .services_photo{
+        width: auto;
+        font-size: 2.5rem;
+    }
+    .our_services {
+        position: relative;
+        margin: 3rem 5rem;
+        /* margin-top: 3rem; */
+      }
+      .photo h2{
+        font-size: 3rem;
+      }
+   
+    .step {
+        height: 5rem;
+        width: 5rem;
+    }
+ 
+    .contact textarea{
+        margin: 2rem 0 auto 4rem ;
+        height: 163px;
+        padding: 20px;
+    }
+    .contact form input[type='email']{
+        margin: 1rem 2rem;
+        width: 100%;
+    }
+     input{    
+        width: 100%;
+        height: 63px;
+        gap: 5rem;
+        margin: 1rem 2rem;
+    }
+   
+    input[type="Submit"]{
+        width: 300px;
+        height: 50px;
+        justify-content: flex-start;
+    }
+    .footer ul{
+        font-size: 2rem;
+    }
+    .footer .navlist ul li a {
+        font-size: 2rem;
+    }
+
+    /* Sign UP */
+    .actor{
+        
+        /* margin: auto 5rem auto 83rem; */
+        width: 98%;
+        
+       
+    }
+    .actor ul{
+        height: 51px;
+        float: right;
+    }
+    .actor ul li{        
+        width: 105px;
+        padding: 10px;
+    }
+
+
+    .textinput, .contactinfo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        /* display: inline; */
+        font-size: 3rem;
+        width: 956px;      
+    }
+    .gender_password input{
+        width: 40rem;
+        margin-top: 2%;
+    }
+    .gender_password select{
+        width: 20rem; 
+        margin-top: 2%;      
+    }
+    .signupform input{
+        margin: auto;
+        width: 49%;
+        margin-top: 2%;
+    }
+    .signupform input[type="password"]{
+        margin: auto 1%;
+        height: 63px;
+    }
+    .signupform select{
+        width: 20%;
+        margin: auto;
+        height: 63px;
+    }
+    .signupform input[type="Submit"]{
+        width: 300px;
+
+    }
+    .signupform h2{
+        font-size: 2.5rem;
+    }
+    .login h1{
+        font-size: 60px;
+    }
+    .login p{
+       font-size: 24px;
+    }
+    .login select{
+        width: 20rem; 
+        margin-top: 2%;      
+    }
+    .login form img{
+        width: 120px;
+        height: 120px;
+
+    }
+    
+
+
+
+}

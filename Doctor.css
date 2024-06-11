@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+
+h1{
+	font-size: 4rem;
+}
+h2{
+    font-size: 2rem;
+    color: crimson;
+}
+a{
+    font-size: 1rem;
+	text-decoration: none;
+}
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+body{
+    background: fixed;
+    border-radius: 50px;
+   
+    width: 96%;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+}
+/* .docpage{
+    
+} */
+.header{	
+    position: absolute;
+	height: auto;
+    min-height: 9vh;
+	background-color: blue;
+    width: 96%;
+    /* margin: auto; */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+.hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+    left: 0;
+	align-items: center;
+	justify-content: center;
+    flex-direction: column;
+	cursor: pointer;
+	
+}
+.hamburger .bar {
+	height: 6px;
+	width: 40px;
+	position: relative;
+	background-color: white;
+	z-index: 1;
+    margin-top: 4px;
+}
+.headr{
+    display: flex;
+    flex-direction: row;
+}
+.logo a{
+    display: flex; 
+    flex-direction: row;   
+	justify-content: center;
+    align-items: center;
+       
+}
+.logo a img{
+    width: 40px;
+    height: 40px;
+    padding-top: 5px;
+}
+.userdoc img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.logo a h1{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.userdoc img{
+    border-radius: 50%;
+}
+#docpage{
+    margin-top: 10vh;
+   
+}
+.navlist ul{    
+        list-style: none;
+        position: fixed;
+        background-color: rgba(0,0,0, 0.7);         
+        width: 0vh;
+        height: 60vh;
+        left: 0%;
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        overflow-x: hidden;
+        transition: 0.5s;   
+   
+}
+.navlist ul li a{ 
+
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+ }
+ .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.userdoc:hover .dropdown-content {
+    display: block;
+}
+.docprofile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1%;
+    background-color: blue;
+    width:fit-content;
+    text-align: center;
+    padding: 10px 30px;
+    gap: 20px;
+}
+.userdoc1{
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.docName h1{
+    font-size: 2.5rem;
+}
+.docName h2{
+    font-size: 2rem;
+}
+.docName span{
+    color: crimson;
+}
+.docprofile .docphoto img{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+.docboard{
+    display: flex;
+    flex-direction: column;
+}
+.rightsideboard{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+   }
+.statistics{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    margin-top: 3%;
+}
+.eachstatistics{
+    padding: 20px;
+    height: 100px;
+    width: 180px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1.5rem;
+    border: 3px solid rgba(0,0,0,0.2);
+    
+}
+.calander{
+    margin: 1% 3%;
+    background-color: blue;
+    display: block;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2.5rem;
+    margin-bottom: 2%;
+    color: white;
+
+}
+.calendar-header button{
+    width: 40px;
+    height: 40px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+  }
+th {
+    background-color: blueviolet;
+    font-size: 16px;
+    color: white;
+}
+td {
+    cursor: pointer;
+    font-size: 14px;
+    color: black;
+    width: 20px;
+    height: 30px;
+    padding-left: 5px;
+}
+.calendar-table td {
+    color: white;
+}
+.calendar-table th, .calendar-table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #0eabe9;
+}
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+tr{
+    margin: 2px auto;
+}
+.calendar-table td.today {
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    border: 1px solid rgb(119, 119, 255);
+    width: 30px;
+    height: 30px;
+    margin: auto;
+}
+
+.calendar-table td.other-month {
+    color: #ccc;
+}
+
+.medicalboard tr:nth-child(even){
+    background-color: #f2f2f2
+}
+.calanderfooter{
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid white;
+    width: 60%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1rem;
+}
+.calanderfooter h2{
+    font-size: 1.5rem;
+    color: white;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    border: 2px solid blue;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 5rem;
+}
+form.div{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    font-size: 3rem;
+}
+form div input, select{
+    width: 90%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid crimson;
+    border-radius: 10px;
+    gap: 5rem;
+    margin-left: 1rem;    
+    margin-top:1rem;
+}
+.medicalammount{
+    display: flex;
+    flex-direction: row;
+    margin: 1% auto;
+}
+.medicalammount div{
+    display: flex;
+    flex-direction: column;
+}
+input[type="Submit"]{
+    background-color: #641EAF;
+    margin-top: 10px;
+    width: 140px;
+    height: 40px;
+    border-radius: 1rem;	
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 5rem;
+    cursor: pointer;
+    border: 2px solid white;
+    margin-bottom: 3rem;
+
+}
+
+ input[type="Submit"]:hover{
+    background-color: white;
+    color: #641EAF;
+    border: 1px solid blue;
+    
+}
+.backbtn{    
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    cursor: pointer;
+   }
+.backbtn img{
+    border-radius: 50%;
+}
+.deletebtn{
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+}
+.medicalinfo{
+    margin: auto;
+    margin-top: 4rem;
+    text-indent: 3rem;
+    font-size: 2rem;
+    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+.Appoint-header{
+    background-color: blue;
+    width: 100%;
+    min-height: 8vh;
+    color: white;
+    margin-top: 1vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.patientInformation{
+    display: inline;
+    font-size: 1.5rem;
+    }
+.appoint_deatil{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+textarea{
+    width: 70%;
+    resize: none;
+    border: 1px solid crimson;
+    border-radius: 10px;
+    padding: 10px;
+}
+.docname, .desktoph1{
+    display: none;
+}
+.appointment_table{
+    background-color: whitesmoke;
+    opacity: 0.9;
+    margin-top: 3rem;
+    padding: 2%;
+    height: 380px; 
+    overflow: hidden;
+}
+.recent_appointment{
+    background-color: white;
+    padding: 5px;
+    height: 90%; 
+  overflow-y: auto;
+}
+.delete-btn{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+}
+.complete-btn{
+    background-color:blue;
+    border-radius: 5px;
+    border: 1px solid blueviolet;
+    width: 60px;
+    height: 25px;
+    color: white;
+}
+
+
+
+    @media only screen and (min-width: 1200px) {
+        h1 , .docName h1{
+            font-size: 4rem;
+        }
+        h2, .docName h2{
+            font-size: 3rem;
+
+        }
+        .calanderfooter h2{
+            font-size: 2rem;
+        }
+        .calendar-container{
+            width: 84%;
+            margin: auto;
+            margin-bottom: 1%;
+            height: 90%;
+        }
+        .calendar-container td{
+            height: 46px;
+        }
+        .header{
+            position: fixed;
+        }
+        form div input, select{
+            width: 80rem;
+        }
+        .patientInformation select{
+             width: 80rem;
+        }
+        form div input[type='date']{
+            width: 40rem;
+        }
+        .docname {
+            display: flex;
+        }
+        .docboard{
+            display: flex;
+            flex-direction: row;
+        }
+        .calander{
+            width: 45%;
+            padding-top: 40px;
+        }
+        th, td{
+            padding: 12px;
+        }
+        .rightsideboard{
+            width: 100%;
+        }
+       
+        .phoneh1{
+            display: none;
+        }
+        .appoint_deatil{
+            display: flex;
+            flex-direction: row;
+        }
+        .appoint_deatil div{
+            display: flex;
+            flex-direction: column;
+        }
+        .appoint_deatil div input[type='time'], input[type='number']{
+            width: 20rem;
+        }
+    }

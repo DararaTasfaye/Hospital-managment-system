@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+h1{
+	font-size: 4rem;
+}
+a{
+    font-size: 1rem;
+	text-decoration: none;
+}
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.container{
+    min-height: 100vh;
+	width: 100%;
+	display: flex; 
+	align-items: center;
+	justify-content: center;
+}
+header{	
+    position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+.header{
+	min-height: 8vh;
+	background-color: white;
+}
+.navbar {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    /* max-width: 1300px;  */
+    padding: 0 10px;
+    font-family: Roboto, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.logo a{
+    display: flex;
+    float: left;
+	top: 0;
+	margin-left: 10%;
+	justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.logo a img{
+    width: 20px;
+    height: 28px;
+    padding-top: 5px;
+}
+.logo a h1{
+    color: black;
+    font-size: 1rem;
+}
+
+.navlist ul{
+	list-style: none;	
+	color: black;
+	width: 60vw;
+	top: 0;
+	display: flex;
+	/* margin-left:5%;
+    margin-right: 5%; */
+	align-items: center;
+	
+}
+.navlist ul li a{
+    font-size: 1rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	 padding: 5px; 
+	display: block;   
+}
+
+.buttons button{
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: #641EAF;
+
+}
+.buttons a{
+    font-weight: bold;
+    color: black;
+}
+input{    
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid crimson;
+    border-radius: 10px;
+    gap: 5rem;
+    /* margin: auto 5%; */
+    margin-top:1rem;
+}
+
+
+.signup{
+    display: flex;
+    flex-direction: column;
+    
+    min-height: 80vh;
+}
+.signupform{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    padding: 10px;
+    width: 96%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+}
+.signupform h2{
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+.tabs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    float: right;  
+    background-color: #bbbbbb;
+    border-radius: 10px 5px;       
+    margin-left: auto;
+  }
+
+.tabs li{
+    /* background-color: #641EAF; */
+    width: 80px;
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 18px;
+    border-radius: 10px 5px;  
+}
+.tabs li.active {
+    background-color: #641EAF;
+    color: white;
+  }
+.tabs #doctor-tab{
+    border-radius: 10px 5px;  
+}
+.form-container {
+    padding: 20px;
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  .signupform form h3{
+    font-size: 2rem;
+ }
+ .signupform form h2{
+     font-size: 2.5rem;
+     color: #641EAF;
+     text-align: center;
+ }
+
+.step-patient, .step-doctor{
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.3;
+  }
+  .step-patient.active , .step-doctor.active{
+    opacity: 1;
+   background-color: #3c8f3f;
+  }
+
+  .step-patient.finish , .step-doctor.finish{
+    background-color: blue;
+    opacity: 1;
+  }
+  .invalid{
+    background-color: blue;
+  }
+  button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+  }
+  form input[type=submit] {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 10px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+    display: block;
+    width: 84.44px; 
+    height: 40px;  
+  }
+  
+  input[type=Submit] {
+    opacity: 0.8;
+  }
+  /* Check this */
+.patientinfo{
+    display: none;
+  }
+.doctorinfo{
+    display: none;
+}
+  select {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    width: 80%;
+    height: 40px;
+  }
+  
+  /* Option element styling */
+  select option {
+   height: 20px;
+    color: blue;
+    font-size: 1.5rem;
+    padding: 8px 12px;
+  }
+  .error-msg{
+    background-color: red;
+    color: white;
+    font-size: 2rem;
+    display: inline-block;
+    width: 90%;
+    height: 60px;
+    padding: 10px;
+    border: 1px solid crimson;
+    border-radius: 10px;
+    gap: 5rem;
+    margin: auto 5%;
+    margin-top:1rem;
+}
+
+#imageInput {
+    display: none;
+  }
+  
+  .image-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    width: 70%;
+  }
+
+ input[type="radio"]{
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+ } 
+ textarea{
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    margin-top: 3rem;
+    margin-left: 3%;
+    resize: none;
+}
+#text{
+    font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 1200px) {
+    .logo a img{
+        width: 30px;
+        height: 36px;
+        padding-top: 5px;
+    }
+    .logo a h1{
+        font-size: 36px;
+    }
+    .navlist ul{
+        width: 78vw;
+        justify-content: center;
+    }
+    .navlist ul li a{
+        font-size: 2.5rem;
+        font-weight: 500;
+        padding: 20px;
+    }
+    .buttons button{
+        width: 128px;
+        height: 49px;
+        border-radius: 10px;
+    }
+    .buttons a{
+        font-size: 24px;
+    }
+    input{    
+        width: 100%;
+        height: 50px;
+        gap: 5rem;
+        /* margin: 1rem 2rem; */
+        padding: 10px;
+    }
+    input[type="Submit"]{
+        width: 300px;
+        height: 50px;
+        justify-content: flex-start;
+    }
+   
+    .signup{
+        min-height: 100vh;
+        background-color: #f4f4f4;
+    }
+    .step-patient{
+    height: 30px;
+    width: 30px;
+    }
+    .step-doctor{
+        height: 30px;
+        width: 30px;
+    }
+    .signupform{
+        width: 60%;
+        border: 2px dotted dodgerblue;
+    }
+    .signupform form h3{
+       font-size: 2.5rem;
+    }
+    .signupform form h2{
+        font-size: 3rem;
+       
+    }
+    .signupform h1{
+        font-family: Roboto;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .signupform .patientinfo label{
+        font-size: 1.7rem;
+        font-weight: 600;
+        margin: 1rem;
+    }
+    .patientinfo{
+        width: 750px;
+        padding: 20px;
+      }
+      .doctorinfo{
+        width: 750px;
+        padding: 20px;
+      }
+
+      textarea{
+       padding: 20px;
+    }
+}
